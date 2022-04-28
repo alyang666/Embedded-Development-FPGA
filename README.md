@@ -1,7 +1,7 @@
 # Embedded-Development-FPGA
 
 想念 数电工程师-周鹏 的第不知道多少天，一个亲切有趣的老师，也是一个水平极高的留洋博士-集成电路工程师，上课的穿着打扮一看就是那种学霸中的学霸很有气场，
-只上过他一学期数电课但对他印象特别深刻。来法国之后的嵌入式课程学的可谓是一塌糊涂，从而也放弃了这个方向，属实有些对不起他 :(
+只上过他一学期数电课但对他印象特别深刻。来法国之后的嵌入式课程学的可谓是一塌糊涂，看着那凌乱的代码和纹丝不动的单片机实在是我那学期的噩梦，我也因此放弃了这个方向。也更能体会到周鹏老师在课堂上轻描淡写的讲述他的经历，实际上是付出了多少努力才换来的。祝他事业有成，为中国半导体贡献力量哈哈哈哈
 
 A field-programmable gate array (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing – hence the term field-programmable. The FPGA configuration is generally specified using a hardware description language (HDL), similar to that used for an application-specific integrated circuit (ASIC). Circuit diagrams were previously used to specify the configuration, but this is increasingly rare due to the advent of electronic design automation tools.
 
