@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity reduct is
+port (
+	clk, EN : in std_logic;
+	enable : out std_logic
+	);
+end reduct;
+
+architecture a of reduct is
+
+signal mem : integer range 0 to 50000000;
+signal enable_cpt : std_logic;
+begin
+	process(clk)
+	begin
+		if rising_edge(clk) then
+			if EN = '1' then
+				if mem >= 5000000-1 then 
+					mem <= 0;
+				else 
+					mem <= mem + 1;
+				end if;
+			end if;
+		end if;
+	end process;
+
+	process (mem)
+	begin
+		if mem >= 5000000-1 then 
+			enable_cpt <= '1';
+		else 
+			enable_cpt <= '0';
+		end if;
+	end process;
+		enable <= EN and enable_cpt;
+end a;

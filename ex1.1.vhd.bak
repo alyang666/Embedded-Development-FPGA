@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity comp1 is
+port(
+     SW: in std_logic_vector(7 downto 0);
+	  HEX0,HEX1: out std_logic_vector(6 downto 0));
+end comp1;
+
+
+
+architecture a of comp1 is
+
+
+component seg7 is
+port(
+     E: in std_logic_vector(3 downto 0);
+	  S: out std_logic_vector(6 downto 0));
+end component;
+
+
+component reg is
+port(
+     E: in std_logic_vector(7 downto 0);
+	  clk: in std_logic;
+	  nclear, enable: in std_logic;
+	  Q: out std_logic_vector(7 downto 0));
+end component;
+
+signal S: unsigned(7 downto 0);
+signal mem: std_logic_vector(7 downto 0);
+signal clk: std_logic;
+signal nclear: std_logic;
+signal enable: std_logic;
+
+begin
+
+c1: seg7 port map(std_logic_vector(S(7 downto 4)),HEX0);
+c2: seg7 port map(std_logic_vector(S(3 downto 0)),HEX1);
+c3: reg port map (SW,clk,nclear,enable,mem);
+
+end a;
+
+
+
+
+

@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg is
+port(
+     E: in std_logic_vector(7 downto 0);
+	  clk: in std_logic;
+	  nclear, enable: in std_logic;
+	  Q: out std_logic_vector(7 downto 0));
+end reg;
+
+architecture a of reg is
+begin
+     process(clk,nclear,enable)
+	  begin
+     if rising_edge(clk) then
+	    if enable='1' then
+		   if nclear='1' then
+			   Q<=E;
+			end if;
+		 end if;
+	   end if;
+end process;
+end a;
