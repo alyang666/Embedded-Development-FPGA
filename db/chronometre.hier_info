@@ -1,0 +1,136 @@
+|chro1
+MAX10_CLK1_50 => compteur8:U3.clk
+MAX10_CLK1_50 => reduct:u4.clk
+HEX0[0] <= seg7:U1.S[0]
+HEX0[1] <= seg7:U1.S[1]
+HEX0[2] <= seg7:U1.S[2]
+HEX0[3] <= seg7:U1.S[3]
+HEX0[4] <= seg7:U1.S[4]
+HEX0[5] <= seg7:U1.S[5]
+HEX0[6] <= seg7:U1.S[6]
+HEX1[0] <= seg7:U2.S[0]
+HEX1[1] <= seg7:U2.S[1]
+HEX1[2] <= seg7:U2.S[2]
+HEX1[3] <= seg7:U2.S[3]
+HEX1[4] <= seg7:U2.S[4]
+HEX1[5] <= seg7:U2.S[5]
+HEX1[6] <= seg7:U2.S[6]
+
+
+|chro1|seg7:U1
+E[0] => Mux0.IN19
+E[0] => Mux1.IN19
+E[0] => Mux2.IN19
+E[0] => Mux3.IN19
+E[0] => Mux4.IN19
+E[0] => Mux5.IN19
+E[0] => Mux6.IN19
+E[1] => Mux0.IN18
+E[1] => Mux1.IN18
+E[1] => Mux2.IN18
+E[1] => Mux3.IN18
+E[1] => Mux4.IN18
+E[1] => Mux5.IN18
+E[1] => Mux6.IN18
+E[2] => Mux0.IN17
+E[2] => Mux1.IN17
+E[2] => Mux2.IN17
+E[2] => Mux3.IN17
+E[2] => Mux4.IN17
+E[2] => Mux5.IN17
+E[2] => Mux6.IN17
+E[3] => Mux0.IN16
+E[3] => Mux1.IN16
+E[3] => Mux2.IN16
+E[3] => Mux3.IN16
+E[3] => Mux4.IN16
+E[3] => Mux5.IN16
+E[3] => Mux6.IN16
+S[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|chro1|seg7:U2
+E[0] => Mux0.IN19
+E[0] => Mux1.IN19
+E[0] => Mux2.IN19
+E[0] => Mux3.IN19
+E[0] => Mux4.IN19
+E[0] => Mux5.IN19
+E[0] => Mux6.IN19
+E[1] => Mux0.IN18
+E[1] => Mux1.IN18
+E[1] => Mux2.IN18
+E[1] => Mux3.IN18
+E[1] => Mux4.IN18
+E[1] => Mux5.IN18
+E[1] => Mux6.IN18
+E[2] => Mux0.IN17
+E[2] => Mux1.IN17
+E[2] => Mux2.IN17
+E[2] => Mux3.IN17
+E[2] => Mux4.IN17
+E[2] => Mux5.IN17
+E[2] => Mux6.IN17
+E[3] => Mux0.IN16
+E[3] => Mux1.IN16
+E[3] => Mux2.IN16
+E[3] => Mux3.IN16
+E[3] => Mux4.IN16
+E[3] => Mux5.IN16
+E[3] => Mux6.IN16
+S[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|chro1|compteur8:U3
+clk => mem[0].CLK
+clk => mem[1].CLK
+clk => mem[2].CLK
+clk => mem[3].CLK
+clk => mem[4].CLK
+clk => mem[5].CLK
+clk => mem[6].CLK
+clk => mem[7].CLK
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+enable => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+nclear => mem.OUTPUTSELECT
+Q[0] <= mem[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= mem[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= mem[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= mem[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= mem[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= mem[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= mem[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= mem[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|chro1|reduct:u4
+clk => enable~reg0.CLK
+EN => enable~reg0.ENA
+enable <= enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
